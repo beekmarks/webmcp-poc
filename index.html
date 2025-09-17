@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelity Investments - WebMCP POC</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="page-container">
+        <header class="header">
+            <img src="https://www.fidelity.com/bin-public/060_www_fidelity_com/images/Fidelity-footer-logo.png" alt="Fidelity Logo" class="logo">
+            <h1>Welcome, Jane Doe</h1>
+        </header>
+
+        <main class="main-content">
+            <div id="portfolio-summary" class="content-module">
+                <h2>Portfolio Summary</h2>
+                <div id="accounts-list">
+                    </div>
+                <div id="performance-chart" class="chart-placeholder">
+                    <p>Performance Chart Area</p>
+                    <p id="chart-time-period">Time Period: YTD</p>
+                    <div class="chart-content">
+                        <div class="chart-bars" id="chart-bars">
+                            <!-- Chart bars will be generated dynamically -->
+                        </div>
+                        <div class="performance-summary">
+                            <div class="performance-metric">
+                                <div class="label">Total Return</div>
+                                <div class="value" id="total-return">+12.5%</div>
+                            </div>
+                            <div class="performance-metric">
+                                <div class="label">Portfolio Value</div>
+                                <div class="value" id="portfolio-value">$355,231</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="transfer-module" class="content-module" style="display: none;">
+                <div id="transfer-form-container">
+                    <h2>Fund Transfer</h2>
+                    <form id="transfer-form">
+                        <label for="fromAccount">From:</label>
+                        <input type="text" id="fromAccount" name="fromAccount" readonly>
+                        <label for="toAccount">To:</label>
+                        <input type="text" id="toAccount" name="toAccount" readonly>
+                        <label for="amount">Amount ($):</label>
+                        <input type="text" id="amount" name="amount" readonly>
+                        <button type="button" id="submit-transfer-btn">Submit</button>
+                        <button type="button" id="cancel-transfer-btn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <aside class="ai-assistant-panel">
+            <div class="ai-assistant-header">
+                <h3>Financial Co-Pilot</h3>
+            </div>
+            <div id="ai-chat-history" class="ai-chat-history">
+                <div class="message agent-message">Hello! How can I help you manage your finances today?</div>
+            </div>
+            <div class="ai-input-area">
+                <textarea id="ai-user-prompt" placeholder="e.g., Transfer $5000 from my Brokerage to my Roth IRA"></textarea>
+                <button id="ai-send-btn">Send</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/llmClient.js"></script>
+    <script src="js/fidelityApp.js"></script>
+    <script src="js/webmcpProvider.js"></script>
+    <script src="js/agentClient.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
