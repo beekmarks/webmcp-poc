@@ -27,7 +27,7 @@ This repository contains a fully functional Proof of Concept that demonstrates h
 
 1. **Clone and Navigate**
    ```bash
-   git clone https://github.com/your-username/webmcp-poc.git
+   git clone https://github.com/beekmarks/webmcp-poc.git
    cd webmcp-poc
    ```
 
